@@ -35,6 +35,11 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   font-size: 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 /* Focus styles for accessibility */
@@ -44,6 +49,7 @@ body {
 }
 
 .app-container {
+  width: 100%;
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
