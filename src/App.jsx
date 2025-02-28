@@ -24,7 +24,7 @@ function App() {
   useEffect(() => {
     const checkStatus = async () => {
       try {
-        const response = await fetch('http://localhost:5000/status');
+        const response = await fetch('https://cdp-backend-kvfu.onrender.com/status');
         const data = await response.json();
         
         setDocsStatus(data.data);
@@ -41,7 +41,7 @@ function App() {
           ]);
           
           // Trigger scraping
-          await fetch('http://localhost:5000/scrape', {
+          await fetch('https://cdp-backend-kvfu.onrender.com/scrape', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -110,7 +110,7 @@ function App() {
         };
       }
       
-      const response = await fetch(`http://localhost:5000/${endpoint}`, {
+      const response = await fetch(`https://cdp-backend-kvfu.onrender.com/${endpoint}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
